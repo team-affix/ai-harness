@@ -1,16 +1,16 @@
 # ai-harness
 
-TypeScript package for AI harnesses aimed at high-quality outputs, including with smaller models.
+TypeScript workspace for AI harnesses aimed at high-quality outputs, including with smaller models.
 
-This repository is a compile-only skeleton. Harness implementations are not here yet, and `@cursor/sdk` is not a dependency until a harness needs to drive Cursor agents.
+`@ai-harness/core` holds shared harness code and lists only the packages that code needs. `@ai-harness/cursor-implementation` is the Cursor agent client. `@cursor/sdk` is a dependency of that package, along with its `zod` peer.
 
 ## Build
 
-Requires Node.js 18 or newer.
+Installing and compiling the workspace needs Node.js 18 or newer. Running the Cursor client needs Node.js 22.13 or newer, because that is what `@cursor/sdk` declares.
 
 ```bash
 npm install
 npm run build
 ```
 
-`npm run build` compiles `src/` to `dist/` with `tsc`. `npm run typecheck` typechecks without emitting files.
+`npm run build` compiles every workspace package with `tsc`. `npm run typecheck` typechecks without emitting files.

@@ -1,0 +1,25 @@
+{
+  "name": "@ai-harness/cursor-implementation",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Cursor agent client. This package is the import site for @cursor/sdk.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ai-harness/core": "*",
+    "@cursor/sdk": "^1.2.0",
+    "zod": "^4.0.0"
+  }
+}
