@@ -17,6 +17,10 @@
   },
   "scripts": {
     "build": "tsc",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit && tsc -p test --noEmit",
+    "test": "tsc -p test && cd dist-test && node --test"
+  },
+  "devDependencies": {
+    "@types/node": "^18.19.130"
   }
 }

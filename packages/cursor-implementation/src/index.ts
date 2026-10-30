@@ -1,2 +1,2 @@
-/** Cursor agent client. This package is the import site for `@cursor/sdk`. */
-export { Agent, CursorAgentError } from "@cursor/sdk";
+export { createCursorFrontier } from "./frontier.js";
+export type { CursorPromptOptions } from "./promptJson.js";
